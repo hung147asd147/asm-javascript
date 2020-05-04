@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cd9546adae.js" crossorigin="anonymous"></script>
+   
+    <script src="gioHang.js"></script>
+    <script src="hoTro.js"></script>
+    <script src="sanpham.js"></script>  
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .img {
+            width: 100%;
+        }
+        input {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            
+        }
+        #gio-hang{
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 4px #ddd;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1100px;
+            margin-top: 100px;
+        }
+        .item-gio-hang {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .item-gio-hang .hinhAnh img{
+            
+            width: 60px;
+            height: 60px;
+        }
+        .item-gio-hang .hinhAnh, .soLuong, .tongTien, .hanhDong {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .item-gio-hang .gia{
+            flex: 2;
+        }
+        .item-gio-hang .ten{
+            flex: 3; 
+        }
+        .item-gio-hang .gia .giaGoc{
+            font-size: 12px;
+            text-decoration: line-through;
+            color: #888;
+        }
+        .item-gio-hang .gia .giaBan {
+            color:  red;
+        }
+        .item-gio-hang .hanhDong i:hover{
+            color: #f7452e ;
+        }
+        #gio-hang .tieuDe{
+            font-size: 20px;
+            color: #f7452e;
+            margin-bottom: 20px;
+        }
+        .item-gio-hang .hinhAnh{
+            width: 60px;
+        }
+        .item-gio-hang input{
+            width: 100%;
+        }
+        #gio-hang .tieuDeItemGioHang{
+            margin-bottom: 20px;
+            font-size: 600;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .form{
+            width: 1100px;
+            padding: 1px solid #ddd;
+            box-shadow: 2px 2px 4px #ddd;
+            padding: 30px;
+            margin: 0 auto;
+            margin-top: 50px;
+            margin-bottom: 200px;
+            background-color: #EEEEEE;
+        }
+        .form label,
+        button{
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .form ,
+        button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form .error {
+            font-size: 12px;
+            color: red;
+            font-style: italic;
+            margin-top: 5px;
+            line-height: 12px;
+            height: 12px;
+        }
+        .form input{
+            width: 1050px;
+            height: 40px;
+        }
+        .form label{
+            margin-bottom: 5px;
+            margin-left: 5px;
+        }
+        .thongTin {
+            color: #f7452e;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .btn{
+            font-size: 18px;
+            color: #fff;
+            background-color: #FF6600;
+            opacity: 0.7;
+        }
+        .btn:hover{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+   
+    <header>
+        <div id="thanhtren">		
+            <div class ="khoithanhlienlac">
+                <div class="thanhlienlac">
+                    <div class="lienlac">
+                        <div class="tintuc">
+                            <a href="tintuc.html">
+                                Tin tức
+                            </a>						
+                        </div>
+                        <div class="lienhe">
+                            <a href="lienhe.html">
+                                Liên hệ
+                            </a>
+                        </div>
+                        <div class="dangki">
+                            <a href="Dangnhap_dangki.html">
+                                Đăng kí
+                            </a>
+                        </div>
+                        <div class="dangnhap">
+                            <a href="Dangnhap_dangki.html">
+                                Đăng nhập
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="khoilogo-timkiem">
+                <div class="logo-timkiem">
+                    <div class="logo">
+                        <a href="giao_dien_asm.html">
+                            <img src="images/logo.png">
+                        </a>
+                    </div>
+                    <div class="timkiem">
+                        <div class="khoitimkiem">
+                            <input type="text" placeholder="Tìm kiếm">
+                            <input type="button" value="Tìm">
+                        </div>
+                        
+                    </div>
+                    <div class="giohang">
+                        <div class="chugiohang">
+                            <a href="gio_hang.html">
+                                 Giỏ hàng
+                            </a>
+                        </div>
+                        <div class="imggiohang">
+                            <a href="gio_hang.html">
+                                <img src="images/giohang.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mangxahoi-hotline">
+                        <div class="mangxahoi">
+                            <div class="fb">
+                                <a href="https://www.facebook.com/adidasVN/" target="_blank">
+                                    <img src="images/fb.png">
+                                </a>
+                            </div>
+                            <div class="tw">
+                                <a href="https://twitter.com/adidas" target="_blank">
+                                    <img src="images/tw.png">
+                                </a>
+                            </div>
+                            <div class="ins">
+                                <a href="https://www.instagram.com/adidas/" target="_blank">
+                                    <img src="images/ins.png">
+                                </a>
+                            </div>
+                            <div class="ytb">
+                                <a href="https://www.youtube.com/user/adidas" target="_blank">
+                                    <img src="images/ytb.png">
+                                </a>
+                            </div>
+                            <div class="hotline">
+                                <img src="images/dienthoai2.png">			
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="uudai">
+			<div class="khunguudai">
+				<div class="freechuyen">
+					<div class="khungoto">
+						<img src="images/oto2.png">
+					</div>
+					<div class="khungchu">
+						<a href="#">
+							MIỄN PHÍ VẬN CHUYỂN CHO MỌI ĐƠN HÀNG
+						</a>	
+					</div>
+					
+				</div>
+				<div class="trahang">
+					<div class="khunggiohang">
+						<img src="images/giohang2.png">
+					</div>
+					<a href="#">
+						TRẢ HÀNG DỄ DÀNG
+					</a>	
+				</div>
+			</div>
+        </div>
+
+    </header>
+
+    <div  id="gio-hang">
+        <!--danh sách item giỏ hàng-->
+        <h1 class="tieuDe">Danh Sách Sản Phẩm</h1>
+        <div class="item-gio-hang tieuDeItemGioHang"> 
+                   <div class="hinhAnh">
+                   </div> 
+                     <p class="ten">Sản Phẩm</p>
+                     <div class="gia">
+                        Đơn Giá
+                        </div>
+                        <p class="soLuong">Số Lượng</p>    
+                      <p class="tongTien">Tổng Tiền</p>
+                     <div class="hanhDong">
+                          <p>Thao Tác</p>
+                      </div>
+                </div>
+    </div>
+    <div class="form">
+        <p class="thongTin">Mua Hàng</p>
+        <label for="hoTen">Họ và tên</label>
+        <input type="text" id="hoTen">
+        <label id="hienThiLoiHoTen" for="hoTen" class="error"></label>
+
+        <label for="soDienThoai">Số điện thoại</label>
+        <input type="number" id="soDienThoai">
+        <label id="hienThiLoiSoDienThoai" for="soDienThoai" class="error"></label>
+
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        <label id="hienThiLoiEmail" for="email" class="error"></label>
+
+        <label for="ngaySinh">Ngày Sinh</label>
+        <input type="text" id="ngaySinh">
+        <label id="hienThiLoiNgaySinh" for="ngaySinh" class="error"></label>
+
+        <label for="thoiGianNhanHang">Thời gian nhận hàng trong 8-18h</label>
+        <input type="number" id="thoiGianNhanHang">
+        <label id="hienThiLoiThoiGianNhanHang" for="thoiGianNhanHang" class="error"></label>
+
+        <button  onclick="onClickMuaHang()" class="btn">Mua Hàng</button>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="khungphanduoi">
+                <div class="logoduoi">
+                    <div class="imglogo">
+                        <img src="images/imglogo.png">
+                    </div>
+                    <div class="diachi">
+                        <img src="images/duongke.png">
+                        <h1>						
+                            Công ty TNHH adidas Việt Nam<br><br>
+                            Tầng 8, Deutsches Haus, 33 Lê Duẩn
+                            Phường Bến Nghé, Quận
+                             1, Thành phố Hồ Chí Minh, Việt Nam 
+                        </h1>
+                    </div>
+                </div>
+                <div class="lienhe-thanhtoan">
+                    <h1>Liên hệ & Thanh toán</h1>
+                    <img src="images/duongke.png">
+                    <h2>
+                        Hotline: (+84) 2844581676<br><br>
+                        Website: adidas.com
+                    </h2>
+                    <div class="dkemail">
+                        <input type="text" placeholder="Nhập email của bạn" name="">
+                        <input type="button" value="Đăng kí">
+                    </div>
+                </div>
+                <div class="hotro">
+                    <h1>Hỗ trợ khách hàng</h1>
+                    <img src="images/duongke.png">
+                    <h2>
+                        <a href="#">Chính sách đổi hàng<br><br></a>
+                        <a href="#">Hướng dẫn mua hàng<br><br></a>
+                        <a href="#">Chương trình khuyễn mãi</a>
+                    </h2>
+                </div>
+                <div class="fanpage">
+                    <h1>Fanpage</h1>
+                    <img src="images/duongke.png">
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
+                    <div class="fb-page" data-href="https://www.facebook.com/adidasVN/" data-tabs="fanpage" data-width="242" data-height="155" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/adidasVN/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/adidasVN/">adidas</a></blockquote></div>
+                </div>
+            </div>
+        </div>
+            
+    </footer>
+
+    <script>
+        function onClickMuaHang(){
+                /* b1: kiểm tra hợp lệ*/
+                if (formMuaHangHopLe() == true) {
+                    /*b2 thực hiện đăng nhập*/
+                    console.log('thực hiện đăng nhập')
+                }
+                
+            }
+            function formMuaHangHopLe(){
+                //1. truy cập node hoTen, soDienThoai để lấy dữ liệu
+                var hopLe = true;
+                var nodeHoTen = document.getElementById('hoTen');
+                var nodeSoDienThoai = document.getElementById('soDienThoai');
+                var nodeEmail = document.getElementById('email');
+                var nodeNgaySinh = document.getElementById('ngaySinh');
+                var nodeThoiGianNhanHang = document.getElementById('thoiGianNhanHang')
+                var hoTen = nodeHoTen.value;
+                var soDienThoai = nodeSoDienThoai.value;
+                var email = nodeEmail.value;
+                var ngaySinh = nodeNgaySinh.value;
+                var thoiGianNhanHang = nodeThoiGianNhanHang.value;
+                console.log('Họ tên là: '+ hoTen);
+                console.log('Số điện thoại là: '+ soDienThoai);
+
+                var nodeHienThiLoiHoTen  = document.getElementById('hienThiLoiHoTen');
+                var nodeHienThiLoiSoDienThoai = document.getElementById('hienThiLoiSoDienThoai');
+                var nodeHienThiLoiEmail  = document.getElementById('hienThiLoiEmail');
+                var nodeHienThiLoiThoiGianNhanHang  = document.getElementById('hienThiLoiThoiGianNhanHang');
+                var nodeHienThiLoiNgaySinh = document.getElementById('hienThiLoiNgaySinh')
+                nodeHienThiLoiHoTen.innerHTML = '';
+                nodeHienThiLoiSoDienThoai.innerHTML = '';
+                nodeHienThiLoiEmail.innerHTML = '';
+                nodeHienThiLoiThoiGianNhanHang.innerHTML = '';
+                nodeHienThiLoiNgaySinh.innerHTML = '';
+                
+                if (hoTen == null || hoTen.length <=0 ) {
+                    nodeHienThiLoiHoTen.innerHTML = 'Họ tên không được để trống !';
+                    hopLe = false;
+                }
+                if (soDienThoai == null || soDienThoai.length <=0 || soDienThoai.length >10){
+                    nodeHienThiLoiSoDienThoai.innerHTML = "Số điện thoại không được để trống và không quá 10 số !";
+                    hopLe = false;
+                }
+                if (ngaySinh == null || ngaySinh.length <=0 ){
+                    nodeHienThiLoiNgaySinh.innerHTML = "Vui lòng nhập đúng ngày/Tháng/Năm !";
+                    hopLe = false;
+                }
+                if (thoiGianNhanHang == null || thoiGianNhanHang.length <=0 || thoiGianNhanHang <8 || thoiGianNhanHang > 18){
+                    nodeHienThiLoiThoiGianNhanHang.innerHTML = "Vui lòng nhập thời gian nhận hàng trong khoảng 8-18h !";
+                    hopLe = false;
+                }
+                if (email == null || email.length <=0 ) {
+                    nodeHienThiLoiEmail.innerHTML = 'Email không được để trống !';
+                    hopLe = false;
+                }
+                return hopLe;
+            }
+
+        hienThiDanhSachItemGioHang();
+        function hienThiDanhSachItemGioHang(){
+            var danhSachItemGioHang = layGioHang();
+            console.log(danhSachItemGioHang);
+
+            var HTML = chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang);
+            console.log(HTML);
+
+            var nodeGioHang = document.getElementById('gio-hang');
+            nodeGioHang.innerHTML = nodeGioHang.innerHTML + HTML;
+        }
+        /*chuyển 1 danh sách thành html
+        input: danh sach item giỏ hàng
+        output : html hiển thị item giỏ hàng*/
+        function chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang) {
+            var htmlTong = '';
+            for(var i = 0; i < danhSachItemGioHang.length; i++){
+                htmlTong= htmlTong + chuyenDoiTuongItemGioHangSangHTML(danhSachItemGioHang[i]);
+            }
+            return htmlTong;
+        }
+        /* chuyển đối tượng thành html
+        input : đối tượng
+        output: hmtl hiển thị item giỏ hàng*/
+        function chuyenDoiTuongItemGioHangSangHTML(itemGioHang){
+            //itemGioHang : idSanPham & soLuong
+            /*b1 từ idSanPham -> dói tượng sản phẩm(hình ảnh tên giá*/
+            /*b2 : khi có đối tượng thay thế những giá trị của đối tượng vào đạon html*/
+            var sanPham = laySanPhamTheoId(itemGioHang.idSanPham);
+            console.log(sanPham);
+            var tongTien = itemGioHang.soLuong * sanPham.tinhGiaBan();
+
+            var html = '<div class="item-gio-hang"> '+
+                    '        <div class="hinhAnh">' +
+                    '          <img src="'+ sanPham.hinhAnh +'"> '+
+                    '         </div> ' +
+                    '         <p class="ten">'+ sanPham.ten +'</p> ' +
+                    '         <div class="gia">' +
+                    '           <span class="giaGoc">'+ sanPham.giaGoc +'đ</span>' +
+                    '           <span class="giaBan">'+ sanPham.tinhGiaBan() +'đ</span>'+
+                    '          </div>    '+
+                    '          <input type="number" class="soLuong" value="'+ itemGioHang.soLuong+'">'+
+                    '          <p class="tongTien">'+ tongTien +' vnđ</p>'+
+                    '          <div class="hanhDong">'+
+                    '                <i class="far fa-trash-alt"></i>'+
+                    '           </div>'+
+                    '      </div>' ;
+            return html;
+        }
+    </script>
+    <!--b1 xây dựng layout cho 1 iteam giỏ hàng
+    b2 chuyển đối đói tượng item giỏ hàng thành html đã xây dựng từ b1
+    b3 biết hàm chuyển đổi 1 danh sách item giỏ hàng-->
+    <!-- gắn html danh sách item giỏ hàng vào node trong html-->
+</body>
+</html>

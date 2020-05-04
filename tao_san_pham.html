@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo danh sách sản phẩm</title>
+    <script src="hoTro.js"></script>
+    <script src="sanpham.js"></script>
+
+</head>
+<body>
+    <script>
+        /*b1 lưu trữ danh sách sản phẩm xuống local strorage theo key danhSachSanPham*/
+        /*tạo danh sách sản phẩm*/
+        var danhSachSanPham = new Array();
+        var sanPhamIphone5 = taoRaDoiTuongSanPham("https://img-static.tradesy.com/item/24524225/balenciaga-white-speed-men-s-10-sneakers-size-eu-43-approx-us-13-regular-m-b-2-0-960-960.jpg"
+        ,"BALENCIAGA",20000000,15,"Hà Nội");
+        var sanPhamIphone6 = taoRaDoiTuongSanPham("https://cdn.shopify.com/s/files/1/0874/4652/products/BLACK_552d7574-ddf8-4287-88a9-7a60335f4c50_1024x.png?v=1569051601"
+        ,"YEEZY 700",1000000,10,"Hà Nội");
+        var sanPhamIphone7 = taoRaDoiTuongSanPham("https://stealsneaker.com/upload/sanpham/adidas-yeezy-boost-350-v2-butter-500x500-8148.jpg"
+        ,"YEEZY 350",5000000,20,"Hà Nội");
+        var sanPhamIphone8 = taoRaDoiTuongSanPham("https://cf.shopee.vn/file/1923f3a18324651bbbcf595ca9a94bb0"
+        ,"ULTRA BOOST",7000000,5,"Hà Nội");
+
+       for(var i =0; i <5; i++){
+            danhSachSanPham.push(sanPhamIphone5);
+            danhSachSanPham.push(sanPhamIphone6);
+            danhSachSanPham.push(sanPhamIphone7);
+            danhSachSanPham.push(sanPhamIphone8);
+       }
+
+        /*chuyển danh sách sang json*/
+        var json = JSON.stringify(danhSachSanPham);
+        console.log(json);
+
+        /*lưu trữ xuống local storage*/
+
+        localStorage.setItem('danhSachSanPham', json);
+
+        /*chuyển load danh sach đối tượng từ local storage lên*/
+        var jsonLayTuLocalStorage = localStorage.getItem('danhSachSanPham');
+        /*b1 lấy json từ local storage lên*/
+        var danhSachSanPhamTuLocalStorage = JSON.parse(jsonLayTuLocalStorage);
+        console.log(danhSachSanPhamTuLocalStorage);
+    </script>
+</body>
+</html>

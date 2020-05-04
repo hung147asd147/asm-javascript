@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm sản phẩm mới</title>
+    <script src="hoTro.js"></script>
+    <script src="sanpham.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        #them-san-pham{
+            width: 400px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 1px 2px 4px #ddd;
+            padding: 40px;
+        }
+        #them-san-pham label,
+        input {
+            width: 100%;
+            display: block;
+        }
+
+        #them-san-pham label {
+            margin-top: 20px;
+
+        }
+        #them-san-pham input {
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        #them-san-pham button {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px 20px;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="them-san-pham">
+        <label for="hinhAnh">Hình ảnh</label>
+        <input type="text" id="hinhAnh">
+
+        <label for="ten">Tên</label>
+        <input type="text" id="ten">
+
+        <label for="giaGoc">Giá Gốc</label>
+        <input type="number" id="giaGoc">
+
+        <label for="phanTramGiamGia">Phần trăm giảm giá (1-100%)</label>
+        <input type="number" id="phanTramGiamGia">
+
+        <label for="khuVuc">Khu Vực</label>
+        <input type="text" id="khuVuc">
+
+        <button onclick="onClickThemMoiSanPham()" id="btn">Thêm mới sản phẩm</button>
+
+
+    </div>
+
+
+    <script>
+        /*b1: tạo ra hàm để lắng nghe khi người dung click vào button*/
+        function onClickThemMoiSanPham(){
+
+        /*b2: truy cập toàn bộ node để lấy dữ liệu: hinhAnh,ten, giaGoc ....*/
+        var nodeHinhAnh = document.getElementById('hinhAnh');
+        var hinhAnh = nodeHinhAnh.value;
+        console.log(hinhAnh);
+
+        var nodeTen = document.getElementById('ten');
+        var ten = nodeTen.value;
+        console.log(ten);
+
+        var nodeGiaGoc = document.getElementById('giaGoc');
+        var giaGoc = nodeGiaGoc.value;
+        console.log(giaGoc);
+
+        var nodePhanTramGiamGia = document.getElementById('phanTramGiamGia');
+        var phanTramGiamGia = nodePhanTramGiamGia.value;
+        console.log(phanTramGiamGia);
+
+        var nodeKhuVuc = document.getElementById('khuVuc');
+        var khuVuc = nodeKhuVuc.value;
+        console.log(khuVuc);
+        /*b3: tao ra đối tượng từ dữ liệu input*/
+            var sanPham = taoRaDoiTuongSanPham(hinhAnh,ten, giaGoc, phanTramGiamGia,khuVuc);
+            console.log(sanPham);
+        /*b4: lấy danh sách từ cũ local storage lên*/
+        var jsonDanhSachSanPham = localStorage.getItem('danhSachSanPham');
+        var danhSachSanPham = JSON.parse(jsonDanhSachSanPham);
+        if (danhSachSanPham == null)
+            danhSachSanPham = new Array;
+        console.log(sanPham);
+        /*b5: thêm sản phẩm người dùng nhập vào từ danh sách cũ*/
+        danhSachSanPham.push(sanPham);
+        /*b6: cập nhật lại danh sách xuống local storage*/
+        var jsonDanhSachSanPham = JSON.stringify(danhSachSanPham);
+        localStorage.setItem('danhSachSanPham', jsonDanhSachSanPham);
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,659 @@
+body {
+    margin: 0px;
+    font-family: tahoma;
+    /*font khong chân*/
+    font-size: 14px;
+    margin: 0px;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.san-pham img {
+	width: 100%;
+}
+
+
+#hien-thi-san-pham {
+    width: 1200px;
+    margin: auto;
+}
+
+.san-pham {
+    width: calc(25% - 40px);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 20px;
+    box-shadow: 2px 2px 4px #ddd;
+}
+
+.phan-tram-giam-gia {
+    font-size: 18px;
+	text-align: right;
+	color: red;
+}
+
+.ten-san-pham {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.gia-goc {
+    font-size: 12px;
+    color: #666;
+    text-decoration: line-through;
+    margin-right: 5px;
+
+}
+
+.khu-vuc {
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+}
+
+.gia-ban {
+    color: red;
+}
+
+button {
+    background-color: #FF6600;
+    width: 150px;
+    height: 40px;
+    float: right;
+}
+.btn-them{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+.btn-them:hover{
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: arial;
+}
+ul, ol {
+	padding: 0px;
+	margin: 0px;
+}
+#thanhtren{
+	width: 100%;
+	height: 202px;
+	background-color: #fff;
+    padding: 0px;
+}
+.khoithanhlienlac{
+	width: 100%;
+	height: 36px;
+	background-color: black;	
+	margin-bottom: 1px;
+}
+.thanhlienlac{
+	margin: 0 auto;
+	width: 1200px;
+	height: 36px;
+	
+}
+.lienlac{
+	float: right;
+	width: 314px;
+	height: 36px;
+	
+}
+.lienlac a{
+    float: right;
+	text-decoration: none;
+    color: #fff;
+    margin-right: 22px;
+    line-height: 35px;
+}
+.tintuc{
+	opacity: 0.7;
+}
+.tintuc:hover{
+	opacity: 1;
+	transform: translateY(-1px);
+}
+.lienhe{
+	opacity: 0.7;
+}
+.lienhe:hover{
+	opacity: 1;
+	transform: translateY(-1px);
+}
+.dangki{
+	opacity: 0.7;
+}
+.dangki:hover{
+	opacity: 1;
+	transform: translateY(-1px);
+}
+.dangnhap{
+	opacity: 0.7;
+}
+.dangnhap:hover{
+	opacity: 1;
+	transform: translateY(-1px);
+}
+
+.khoilogo-timkiem{
+	width: 100%;
+	height: 164px;
+	background-color:black;
+	margin-bottom: 0px;
+}
+.logo-timkiem{
+	margin: 0 auto;
+	width: 1200px;
+	height: 164px;
+	
+}
+.logo{
+	float: left;
+	width: 229px;
+	height: 164px;
+	
+}
+.logo img{
+	margin-top: 15px;
+	margin-left: 17px;
+}
+.timkiem{
+	float: left;
+	width: 450px;
+	height: 164px;
+	
+}
+.khoitimkiem{
+	margin-top: 50px;
+	margin-left: 10px;
+	width: 430px;
+	height: 50px;
+	background-color: #fff;
+}
+.timkiem input:first-child{
+	width: 365px;
+	height: 50px;
+	border: none;
+	padding: 10px;
+	background-color: transparent;
+	color: black;
+	font-size: 20px;
+}
+.timkiem input:last-child {
+	width: 60px;
+	height: 50px;
+	border: none;
+	padding: 10px;
+	background-color: transparent;
+	background-image: url('css/images/kinhlup.png');
+	background-repeat: no-repeat; 
+	background-position: center; 
+	text-indent: -3000px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 1px;
+	cursor: pointer;
+	float: right
+}
+.giohang{
+	width: 170px;
+	height: 164px;
+	float: left;
+	
+}
+.chugiohang{
+	width: 93px;
+	height: 52px;
+	float: left;
+	margin-top: 48px;	
+	margin-left: 10px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 52px;
+	color: #fff;
+
+}
+.chugiohang a{
+	text-decoration: none;
+	color: #fff;
+}
+.imggiohang{
+	width: 50px;
+	height: 52px;
+	float: left;
+	margin-top: 48px;	
+	margin-left: 1px;
+}
+.imggiohang img{
+	margin-top: 5px;
+}
+
+.giohang{
+	opacity: 0.7;
+}
+.giohang:hover{
+	opacity: 1;
+	transform: translateY(-1px);
+	
+}
+.mangxahoi-hotline{
+	width: 337px;
+	height: 164px;	
+	float: right;
+	
+}
+.mangxahoi{
+	float: right;
+	margin-bottom: 105px;
+	margin-top: 5px;
+	margin-right: 6px;
+	width: 297px;
+	height: 53px;
+	
+}
+.fb{
+	width: 75px;
+	height: 53px;
+	float: left;
+	
+}
+.fb{
+	opacity: 0.8;
+}
+.fb:hover{
+	opacity: 1;
+	transform: translateY(+1px);
+}
+.tw{
+	width: 73px;
+	height: 53px;
+	float: left;
+	
+}
+.tw{
+	opacity: 0.8;
+}
+.tw:hover{
+	opacity: 1;
+	transform: translateY(+1px);
+}
+.ins{
+	width: 72px;
+	height: 53px;
+	float: left;
+	
+}
+.ins{
+	opacity: 0.8;
+}
+.ins:hover{
+	opacity: 1;
+	transform: translateY(+1px);
+}
+.ytb{
+
+	width: 75px;
+	height: 53px;
+	float: left;
+	
+}
+.ytb{
+	opacity: 0.8;
+}
+.ytb:hover{
+	opacity: 1;
+	transform: translateY(+1px);
+}
+.mangxahoi img {
+	margin-top: 3px;
+	margin-left: 17px;
+	
+}
+.hotline{
+	width: 300px;
+	height: 72px;	
+	float: right;
+	margin-top: 30px;
+	
+}
+.hotline img{
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.hotline{
+	opacity: 0.7;
+}
+.hotline:hover{
+	opacity: 1;
+	transform: translateY(-1px);
+
+}
+
+.khoimenu{
+	width: 100%;
+	height: 30px;
+	background-color: black;
+}
+.menu{
+	margin: 0 auto;
+	width: 1200px;
+	height: 30px;
+	
+}
+.menu li:hover,
+.menu .active{
+	background-image: linear-gradient(#888888,#FFFFFF)
+}
+.menu li{
+	list-style: none;
+}
+.giay{
+	float: left;
+	width: 171px;
+	height: 30px;	
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+}
+.giay a{
+	text-decoration: none;
+	color: #fff;
+}
+.menu :hover,
+.menu .active{
+	background-image: linear-gradient(#888888,#FFFFFF);
+	color: red;
+}
+
+.slider{
+	margin: 0 auto;
+	width: 1519px;
+	height: 564px;
+}
+
+.uudai{
+	
+	width: 100%;
+	height: 40px;	
+	border: 1px solid #afafaf;
+}
+.khunguudai{
+	margin: 0 auto;
+	width: 1200px;
+	height: 40px;
+	
+}
+.freechuyen{
+	width: 520px;
+	height: 40px;
+	float: left;
+	margin-left: 140px;
+	
+}
+.khungoto{
+	width: 55px;
+	height: 40px;	
+	float: left;
+}
+.khungoto img{
+	float: right;
+	margin-top: 12px;
+	margin-right: 4px;
+}
+.khungchu{
+	width: 460px;
+	height: 40px;	
+	float: left;
+	margin-left: 2px;
+	line-height: 40px;
+	text-align: left;
+	color: #797878;
+	
+}
+.khungchu a{
+	text-decoration: none;
+	color: #797878;
+}
+.khungchu a:hover{
+	text-decoration: underline;
+}
+
+.trahang{
+	width: 270px;
+	height: 40px;
+	float: right;
+	margin-right: 140px;
+	
+	line-height: 40px;
+	text-align: center;
+	color: #797878;
+}
+.khunggiohang{
+	width: 55px;
+	height: 40px;	
+	float: left;
+	
+
+}
+.khunggiohang img{
+	float: right;
+	margin-top: 9px;
+	margin-right: 4px;
+}
+.trahang a{
+	text-decoration: none;
+	color: #797878;
+	float: left;
+	margin-left: 2px;
+}
+.trahang a:hover{
+	text-decoration: underline;
+}
+
+.chonkieugiay{	
+	width: 1200px;
+	height: 55px;
+	margin-left: 160px;
+	border: 1px solid #aeaeae;
+	border-left: none;
+	border-right: none;
+	margin-bottom: 30px;
+	position: relative;
+	background-color: black;
+}
+.root > li{
+	list-style: none;
+	float: left;
+
+}
+.root > li > a{
+	text-decoration: none;
+	color: #fff;
+	padding: 0px 20px 0px 10px;	
+	line-height: 55px;	
+	display: block;
+}
+.root > li > a:hover{
+	background: #fff;
+	color: black;
+	transition: ease-in 0.35s;
+	-moz-transition: ease-in 0.35s;
+	-webkit-transition: ease-in 0.35s;
+}
+.submenu{
+	width: 200px;
+	background: black;
+	min-height: 60px;
+	position: absolute;
+	display: none;
+	
+}
+.submenu li{
+	list-style: none;
+	margin-top: 10px;
+	margin-left: 5px;
+	line-height: 30px;
+}
+.submenu li a{
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	border-bottom: 1px solid #fff;
+
+}
+.submenu li a:hover{
+	background-color: #fff;
+	color: black;
+}
+.root > li:hover .submenu{
+	display: block;
+}
+
+.footer{
+	width: 100%;
+	height: 300px;
+	background-color: black;
+}
+.khungphanduoi{
+	margin: 0 auto;
+	width: 1200px;
+	height: 300px;
+	
+}
+.logoduoi{
+	width: 280px;
+	height: 300px;
+	float: left;	
+	margin-left: 20px;
+}
+.imglogo{
+	width: 280px;
+	height: 100px;
+	float: left;
+	
+}
+.imglogo img{
+	margin-left: 10px;
+	margin-top: 42px;
+}
+.diachi{
+	width: 247px;
+	height: 170px;	
+	margin-top: 130px;
+	
+}
+.diachi img{
+	float: left;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+.diachi h1{	
+	margin-left: 5px;
+	font-size: 15px;
+	font-weight: normal;
+	color: #fff;
+}
+.lienhe-thanhtoan{
+	width: 280px;
+	height: 300px;
+	float: left;	
+	margin-left: 10px;
+}
+.lienhe-thanhtoan h1{
+	margin-top: 104px;
+	font-size: 15px;
+	font-weight: normal;
+	margin-left: 10px;
+	color: #fff;
+	margin-bottom: -4px;
+}
+.lienhe-thanhtoan h2{
+	margin-top: 5px;
+	margin-left: 10px;
+	font-size: 15px;
+	font-weight: normal;
+	color: #fff;
+}
+.lienhe-thanhtoan img{
+	margin-top: 1px;
+	margin-left: 10px;
+
+}
+.lienhe-thanhtoan input:first-child{
+	margin-left: 9px;
+	width: 200px;
+	height: 25px;
+}
+.lienhe-thanhtoan input:last-child{
+	background-color: #CC0000;
+	color: #fff;
+	height: 30px;
+	font-weight: 1px;
+	cursor: pointer;
+}
+.hotro{
+	width: 280px;
+	height: 300px;
+	float: left;	
+	margin-left: 10px;
+}
+.hotro h1{
+	margin-top: 104px;
+	font-size: 15px;
+	font-weight: normal;
+	margin-left: 10px;
+	color: #fff;
+	margin-bottom: -4px;
+}
+.hotro img{
+	margin-top: 1px;
+	margin-left: 10px;
+}
+.hotro h2{
+	margin-top: 5px;
+	margin-left: 10px;
+	font-size: 15px;
+	font-weight: normal;
+	color: #fff;
+}
+.hotro a{
+	text-decoration: none;
+	color: #fff;
+}
+.hotro a:hover{
+	text-decoration: underline;	
+}
+.fanpage{
+	width: 280px;
+	height: 300px;
+	float: left;	
+	margin-left: 10px;
+}
+.fanpage h1{
+	margin-top: 104px;
+	font-size: 15px;
+	font-weight: normal;
+	margin-left: 10px;
+	color: #fff;
+	margin-bottom: -4px;
+}
+.fanpage img{
+	margin-top: 1px;
+	margin-left: 10px;
+}
+.fanpage iframe{
+	margin-left: 10px;
+}
